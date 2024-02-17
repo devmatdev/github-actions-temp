@@ -2,9 +2,9 @@ name: Continous Integration and Deployment
 
 on:
   push:
-    branches: [
-      -main
-    ]
+    branches: 
+      - main
+    
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,4 +21,4 @@ jobs:
         run: dotnet Restore
 
       - name: Build app
-        run: dotnet build -c Release --no-restore  
+        run: dotnet build -c Release --no-restore
